@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700,800&amp;display=swap" rel="stylesheet">
+    <title>SVT</title>
+</head>
+
+<body>
+
+    <header>
+        <img class=cloud src="pictures/cloud.svg" width=4000px>
+        <h1>Une pollution invisible</h1>
+        <div class="container">
+            <ul id="scene">
+                <li class="layer" data-depth=".11"></li>
+                <li class="layer" data-depth="1"><img id=plane src="pictures/plane.png" width=50%></li>
+                <li class="layer" data-depth=".11"><img id=cloud1 src="pictures/cloud2.svg" width=120%></li>
+                <li class="layer" data-depth=".21"><img id=cloud2 src="pictures/cloud2.svg" width=200%></li>
+                <li class="layer" data-depth=".31"><img id=cloud3 src="pictures/cloud2.svg" width=160%></li>
+                <li class="layer" data-depth="0.2"><img id=cloud4 src="pictures/cloud2.svg" width=190%></li>
+                <li class="layer" data-depth=".61"><img id=cloud5 src="pictures/cloud2.svg" width=180%></li>
+                
+
+            </ul>
+        </div>
+    </header>
+    <div class=section1>
+        <h1>Internet pollue ?</h1>
+        <p>Internet consomme 1500 TWH par an</p>
+        <img src="pictures/fond.png" width=100%>
+    </div>
+  
+<script src="global.js"></script>
+    <script src="parallax.js"></script>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene);
+        
+    </script>
+    <script>
+
+  alert("Site en cours de creation");
+
+</script>
+</body>
