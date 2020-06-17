@@ -45,90 +45,92 @@ body {
 }
 
 @keyframes floating {
-    from 	{ transform: translate(-10px,  10px); }
-	25%		{ transform: translate(-20px, 50px); } 
-    75%		{ transform: translate(30px, 0px); } 
-    to   	{ transform: translate(-10px, 10px); }    
+    from {
+        transform: translate(-10px, 10px);
+    }
+
+    25% {
+        transform: translate(-20px, 50px);
+    }
+
+    75% {
+        transform: translate(30px, 0px);
+    }
+
+    to {
+        transform: translate(-10px, 10px);
+    }
 }
+
 .sky {
     background: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0)99%);
 }
-.satellite{
-    position:absolute;
-    bottom:1100px;
-    right:25%;
-    z-index:3;
-    transition:all 0.3s linear;
-    
-	animation-name:floating ;
+
+.satellite {
+    position: absolute;
+    bottom: 1100px;
+    right: 25%;
+    z-index: 3;
+    transition: all 0.3s linear;
+
+    animation-name: floating;
     animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    
+
 }
 
 
-.stars{
+.stars {
     width: 100%;
     height: 100%;
     position: absolute;
 }
 
 
-.astronaut{
-    position:absolute;
-    bottom:800px;
-    left:20%;
-    z-index:5;
-    
-    transition:all 0.3s linear;
-    
-	animation-name:floating ;
+.astronaut {
+    position: absolute;
+    bottom: 800px;
+    left: 20%;
+    z-index: 5;
+
+    transition: all 0.3s linear;
+
+    animation-name: floating;
     animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     transform: scaleX(-1);
 }
 
-header{
+header {
     position: absolute;
-    top:0;
-    z-index:2;
+    top: 0;
+    z-index: 2;
     color: aliceblue;
-    width:100%;
+    width: 100%;
 }
 
 
-.section1 div {
-    clip-path: circle(30px at 50% 100px);
-
-    padding: 20px;
-    border-radius: 50px;
-    margin-left: 50%;
-    transform: translate(-50%, 0);
-    width: 70%;
-    background: #f5a03b;
-    transition: 1s all;
-}
 
 
 
 
 .space {
-    
+
     position: relative;
     height: 1500px;
-    background: rgb(13,0,33);
-background: linear-gradient(180deg, rgba(13,0,33,1) 26%, rgba(9,9,121,1) 100%);
+    background: rgb(13, 0, 33);
+    background: linear-gradient(180deg, rgba(13, 0, 33, 1) 26%, rgba(9, 9, 121, 1) 100%);
 }
 
 .color-gradient {
     position: absolute;
     width: 100%;
     height: 100%;
-    top:0;
-   background: rgb(31,0,82);
-background: linear-gradient(180deg, rgba(31,0,82,0) 0%, rgba(31,0,82,1) 59%, rgba(9,9,121,1) 88%);
+    top: 0;
+    background: rgb(31, 0, 82);
+    background: linear-gradient(180deg, rgba(31, 0, 82, 0) 0%, rgba(31, 0, 82, 1) 59%, rgba(9, 9, 121, 1) 88%);
 }
 
 .space h1 {
@@ -147,43 +149,281 @@ background: linear-gradient(180deg, rgba(31,0,82,0) 0%, rgba(31,0,82,1) 59%, rgb
 
 
 
-.section1 div:hover {
-    background: white;
-    clip-path: circle(200% at 50% 8%);
-}
 
-
-.section1 div:hover .info1 {
-    opacity: 0;
-}
-
-.info1 {
-    transition: 0.5s all;
-}
-
-
-.section1 {
-
-    color: rgba(0, 0, 0, 1);
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 300px;
-    min-height: 100%;
-}
-
-.section1 p {
-
-
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 200px;
-    min-height: 100%;
-}
 
 .section1 img {
     margin-top: -30%;
 }
 
+
+/*
+.bloc1 {
+    clip-path: circle(0px at 50% 100px);
+
+    padding: 20px;
+    border-radius: 50px;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    width: 70%;
+    background: #f5a03b;
+    transition: 1s all;
+}
+*/
+.bloc1 {
+    position: relative;
+    background: #00aabb;
+    border-radius: .4em;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 20px;
+    clip-path: circle(0% at 50% 0%);
+    transition: 1s all;
+
+}
+
+.bloc1:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom-color: #00aabb;
+    border-top: 0;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+
+/*
+.bloc2 {
+    display:none;
+    padding: 20px;
+    border-radius: 50px;
+    margin-left: 60%;
+    transform: translate(-50%, 0);
+    width: 70%;
+    background: #f5a03b;
+    transition: 1s all;
+    
+    position: absolute;
+    overflow: hidden;
+    bottom: calc(1% + 120px);
+
+}
+
+.bloc2:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #00aabb;
+	border-bottom: 0;
+	margin-left: -20px;
+	margin-bottom: -20px;
+}
+*/
+
+.bloc2 {
+    position: absolute;
+    background: #00aabb;
+    border-radius: .4em;
+    clip-path: circle(0% at 50% 100%);
+    bottom: calc(10% + 90px);
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 20px;
+    transition: 1s all;
+
+
+}
+
+.bloc2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #00aabb;
+    border-bottom: 0;
+    margin-left: -20px;
+    margin-bottom: -20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bloc3 {
+    position: absolute;
+    background: #00aabb;
+    border-radius: .4em;
+    clip-path: circle(0% at 50% 0%);
+    top: 400px;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 20px;
+    transition: 1s all;
+    z-index: 100;
+
+
+}
+
+.bloc3:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-bottom-color: #00aabb;
+    border-top: 0;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+
+.info3:hover + .bloc3 {
+    clip-path: circle(150% at 50% 0%);
+
+
+}
+
+.info3:hover {
+    background: #f5a03b;
+
+    cursor: pointer;
+}
+
+
+.section1 ul {
+    margin-left: 50%;
+    transform: translate(-50%);
+    text-align: left;
+}
+
+
+.info3 {
+    animation: rainbow-bg 2.5s linear;
+    animation-iteration-count: infinite;
+    clip-path: circle(40% at 50% 50%);
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    width: 45px;
+    background: #fff;
+    transition: 1s all;
+
+    position: absolute;
+    overflow: hidden;
+    top: 300px;
+    z-index: 100;
+}
+
+
+
+.info1:hover + .bloc1 {
+    clip-path: circle(150% at 50% 0%);
+
+
+}
+
+.info1:hover {
+    background: #f5a03b;
+
+    cursor: pointer;
+}
+
+
+
+footer{
+    color: rgba(255,255,255,0.8);
+}
+
+
+a{
+        color: white;
+    text-decoration-line: none;
+
+}
+
+a:hover{
+        transition: 1s all;
+
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+
+.info1 {
+    background: white;
+    animation: rainbow-bg 2.5s linear;
+    animation-iteration-count: infinite;
+    clip-path: circle(40% at 50% 50%);
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    width: 45px;
+    transition: 1s all;
+
+}
+
+.section {
+    z-index: 1000;
+
+}
+
+
+.info2:hover + .bloc2 {
+    clip-path: circle(150% at 50% 110%);
+
+
+}
+
+.info2:hover {
+    background: #f5a03b;
+
+    cursor: pointer;
+}
+
+
+
+.info2 {
+    clip-path: circle(40% at 50% 50%);
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    width: 45px;
+    background: white;
+    transition: 1s all;
+
+    position: absolute;
+    overflow: hidden;
+    bottom: 10%;
+    animation: rainbow-bg 2.5s linear;
+    animation-iteration-count: infinite;
+}
 
 
 
@@ -236,128 +476,240 @@ background: linear-gradient(180deg, rgba(31,0,82,0) 0%, rgba(31,0,82,1) 59%, rgb
 
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
 
 .sky-container {
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  
-  
-  transform: rotateZ(45deg);
+    width: 100%;
+    height: 100%;
+    background: transparent;
+
+
+    transform: rotateZ(45deg);
 }
 
 
 
 .star {
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  height: 2px;
-  background: linear-gradient(-45deg, yellow, rgba(0, 0, 255, 0));
-  filter: drop-shadow(0 0 6px yellow);
-  animation: tail 8000ms ease-in-out infinite, shooting 8000ms ease-in-out infinite;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    height: 2px;
+    background: linear-gradient(-45deg, yellow, rgba(0, 0, 255, 0));
+    filter: drop-shadow(0 0 6px yellow);
+    animation: tail 8000ms ease-in-out infinite, shooting 8000ms ease-in-out infinite;
 }
 
-.star::before, .star::after {
-  position: absolute;
-  content: '';
-  top: calc(50% - 1px);
-  right: 0;
-  height: 2px;
-  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), yellow, rgba(0, 0, 255, 0));
-  border-radius: 100%;
-  transform: translateX(50%) rotateZ(45deg);
-  animation: shining 6000ms ease-in-out infinite;
+.star::before,
+.star::after {
+    position: absolute;
+    content: '';
+    top: calc(50% - 1px);
+    right: 0;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), yellow, rgba(0, 0, 255, 0));
+    border-radius: 100%;
+    transform: translateX(50%) rotateZ(45deg);
+    animation: shining 6000ms ease-in-out infinite;
 }
 
 .star::after {
-  transform: translateX(50%) rotateZ(-45deg);
+    transform: translateX(50%) rotateZ(-45deg);
 }
 
 .star:nth-child(1) {
-  top: calc(20% - 200px);
-  left: calc(60% - 300px);
-  animation-delay: 650ms;
+    top: calc(20% - 200px);
+    left: calc(60% - 300px);
+    animation-delay: 650ms;
 }
-.star:nth-child(1)::before, .star:nth-child(1)::after {
-  animation-delay: 650ms;
+
+.star:nth-child(1)::before,
+.star:nth-child(1)::after {
+    animation-delay: 650ms;
 }
 
 .star:nth-child(2) {
-  top: calc(70% - -50px);
-  left: calc(20% - 190px);
-  animation-delay: 150ms;
+    top: calc(70% - -50px);
+    left: calc(20% - 190px);
+    animation-delay: 150ms;
 }
-.star:nth-child(2)::before, .star:nth-child(2)::after {
-  animation-delay: 150ms;
+
+.star:nth-child(2)::before,
+.star:nth-child(2)::after {
+    animation-delay: 150ms;
 }
 
 .star:nth-child(3) {
-  top: calc(30% - -90px);
-  left: calc(60% - 200px);
-  animation-delay: 2600ms;
+    top: calc(30% - -90px);
+    left: calc(60% - 200px);
+    animation-delay: 2600ms;
 }
-.star:nth-child(3)::before, .star:nth-child(3)::after {
-  animation-delay: 2600ms;
+
+.star:nth-child(3)::before,
+.star:nth-child(3)::after {
+    animation-delay: 2600ms;
 }
 
 .star:nth-child(4) {
-  top: calc(5% - 50px);
-  left: calc(90% - 250px);
-  animation-delay: 6700ms;
+    top: calc(5% - 50px);
+    left: calc(90% - 250px);
+    animation-delay: 6700ms;
 }
-.star:nth-child(4)::before, .star:nth-child(4)::after {
-  animation-delay: 6700ms;
+
+.star:nth-child(4)::before,
+.star:nth-child(4)::after {
+    animation-delay: 6700ms;
 }
 
 .star:nth-child(5) {
-  top: calc(80% - -190px);
-  left: calc(20% - 200px);
-  animation-delay: 2100ms;
+    top: calc(80% - -190px);
+    left: calc(20% - 200px);
+    animation-delay: 2100ms;
 }
-.star:nth-child(5)::before, .star:nth-child(5)::after {
-  animation-delay: 2100ms;
+
+.star:nth-child(5)::before,
+.star:nth-child(5)::after {
+    animation-delay: 2100ms;
 }
+
+
+@keyframes rainbow-bg {
+
+    100%,
+    0% {
+        background-color: rgb(255, 0, 0);
+    }
+
+    8% {
+        background-color: rgb(255, 127, 0);
+    }
+
+    16% {
+        background-color: rgb(255, 255, 0);
+    }
+
+    25% {
+        background-color: rgb(127, 255, 0);
+    }
+
+    33% {
+        background-color: rgb(0, 255, 0);
+    }
+
+    41% {
+        background-color: rgb(0, 255, 127);
+    }
+
+    50% {
+        background-color: rgb(0, 255, 255);
+    }
+
+    58% {
+        background-color: rgb(0, 127, 255);
+    }
+
+    66% {
+        background-color: rgb(0, 0, 255);
+    }
+
+    75% {
+        background-color: rgb(127, 0, 255);
+    }
+
+    83% {
+        background-color: rgb(255, 0, 255);
+    }
+
+    91% {
+        background-color: rgb(255, 0, 127);
+    }
+}
+
+
+
+
+
+@keyframes rainbow{
+		100%,0%{
+			color: rgb(255,0,0);
+		}
+		8%{
+			color: rgb(255,127,0);
+		}
+		16%{
+			color: rgb(255,255,0);
+		}
+		25%{
+			color: rgb(127,255,0);
+		}
+		33%{
+			color: rgb(0,255,0);
+		}
+		41%{
+			color: rgb(0,255,127);
+		}
+		50%{
+			color: rgb(0,255,255);
+		}
+		58%{
+			color: rgb(0,127,255);
+		}
+		66%{
+			color: rgb(0,0,255);
+		}
+		75%{
+			color: rgb(127,0,255);
+		}
+		83%{
+			color: rgb(255,0,255);
+		}
+		91%{
+			color: rgb(255,0,127);
+		}
+}
+
+
 
 
 
 
 /* Animations */
 @keyframes tail {
-  0% {
-    width: 0;
-  }
-  
-  30% {
-    width: 100px;
-  }
-  
-  100% {
-    width: 0;
-  }
+    0% {
+        width: 0;
+    }
+
+    30% {
+        width: 100px;
+    }
+
+    100% {
+        width: 0;
+    }
 }
 
 @keyframes shining {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 30px;
-  }
-  100% {
-    width: 0;
-  }
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 30px;
+    }
+
+    100% {
+        width: 0;
+    }
 }
 
 @keyframes shooting {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(320px);
-  }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(320px);
+    }
 }
